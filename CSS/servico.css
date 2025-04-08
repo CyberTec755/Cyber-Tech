@@ -1,0 +1,123 @@
+#servicos {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    background: #ffffff;
+}
+
+
+.lista-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    padding: 15px;
+    background: var(--cor7);
+    overflow: hidden;
+    transition: .4s ease;
+    box-shadow: 0 0 10px #00000046;
+    margin: 15px;
+    border-radius: 11px;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon i {
+    color: var(--cor4);
+    margin: 15px;
+    font-size: 50px;
+    transition: transform .4s ;
+    transition-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.06,.01,.0.1);
+}
+
+.card-content h4 {
+    color: var(--cor4);
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transition: transform .4s ;
+    transition-delay: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.06,.01,.0.1);
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #181818;
+    margin-bottom: 15px;
+    transition: inherit;
+    transition-delay: 1s;
+    transition: .4s;
+
+}
+.card:hover i,
+.card:hover h4,
+.card:hover p {
+    transform: translateY(-0.625rem);
+
+}
+
+.saiba-mais {
+    color: #00acc1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.4s ease-in-out;
+}
+
+.saiba-mais::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #00acc1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+
+.card:hover .saiba-mais::after {
+    transform: scaleX(1);
+    background: var(--cor4)
+}
+
+@
+
+@media (max-width: 768px) {
+    .lista-servicos {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (max-width: 1280px ) {
+    
+    .section-title {
+        text-align: center;
+    
+    }
+    
+    .section-subtitle {
+        text-align: center;
+    }
+}
